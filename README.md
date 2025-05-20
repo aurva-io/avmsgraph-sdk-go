@@ -6,7 +6,7 @@ This SDK simplifies integration with Microsoft Graph for common directory and ro
 
 ---
 
-## ✨ Features
+## Features
 
 - Built using [Kiota](https://github.com/microsoft/kiota) for consistency and performance
 - Targets selected Microsoft Graph paths:
@@ -21,7 +21,7 @@ This SDK simplifies integration with Microsoft Graph for common directory and ro
 
 ---
 
-## 🛠 Installation
+## Installation
 
 Install using `go get`:
 
@@ -42,10 +42,16 @@ go get github.com/aurva-io/aurva/avmsgraph-sdk-go
 
 ```go
 
+package main
+
+import (
+	"fmt"
+
 	"github.com/Azure/azure-sdk-for-go/sdk/azidentity"
 	avmsgraphsdk "github.com/aurva-io/avmsgraph-sdk-go"
 	azurekiota "github.com/microsoft/kiota-authentication-azure-go"
 	bundle "github.com/microsoft/kiota-bundle-go"
+)
 
 func main() {
 	cred, err := azidentity.NewClientSecretCredential("a.tenantID", "a.clientID", "a.clientSecret", nil)
